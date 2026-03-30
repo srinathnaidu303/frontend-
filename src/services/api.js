@@ -44,6 +44,11 @@ export const getDoctorById = (id) => {
     return api.get(`/doctors/${id}`);
 };
 
+// Update doctor availability
+export const updateDoctorAvailability = (id, available) => {
+    return api.put(`/doctors/${id}/availability?available=${available}`);
+};
+
 
 // ================= APPOINTMENTS =================
 

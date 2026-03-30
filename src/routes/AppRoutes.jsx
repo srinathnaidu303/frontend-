@@ -7,6 +7,7 @@ import Doctors from '../pages/Doctors';
 import Appointment from '../pages/Appointment';
 import MyAppointments from '../pages/MyAppointments';
 import DoctorDashboard from '../pages/DoctorDashboard';
+import DoctorLogin from '../pages/DoctorLogin';
 import AIAgentWidget from '../components/AIAgentWidget';
 
 const AppRoutes = () => {
@@ -38,6 +39,7 @@ const AppRoutes = () => {
                     <div className="nav-links" style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
                         <Link to="/">Home</Link>
                         <Link to="/doctors">Doctors</Link>
+                        <Link to="/doctor-login" style={{ color: '#4ade80', fontWeight: 'bold' }}>Doctor Portal</Link>
                         <Link to="/doctor-dashboard" style={{ color: '#2575fc', fontWeight: 'bold' }}>Dashboard</Link>
                         
                         {user ? (
@@ -67,6 +69,7 @@ const AppRoutes = () => {
                         <Route path="/book-appointment" element={<Appointment />} />
                         <Route path="/my-appointments" element={<MyAppointments />} />
                         <Route path="/doctor-dashboard" element={<DoctorDashboard />} />
+                        <Route path="/doctor-login" element={<DoctorLogin />} />
                         <Route path="*" element={<Navigate to="/" />} />
                     </Routes>
                 </main>
